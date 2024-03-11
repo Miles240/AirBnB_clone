@@ -3,6 +3,8 @@
 
 import json
 import os.path
+from models.base_model import BaseModel
+
 
 
 class FileStorage:
@@ -23,22 +25,44 @@ class FileStorage:
 
     def new(self, obj):
         """create a new key/value pair object"""
-        key = "{}.{}".format(type.__name__, obj.id)
+        key = "{}.{}".format(type(obj).__name__, obj.id)
         self.__objects[key] = obj
 
     def save(self):
-        """serialize and store the json representation of an instance"""
+        """Serialize and store the JSON representation of instances"""
+        # Load existing data from the file, if any
+        existing_data = {}
+        if os.path.isfile(self.__file_path):
+            with open(self.__file_path, mode="r", encoding="utf-8") as file:
+                existing_data = json.load(file)
+        
+        # Append new data to the existing data
+        for key, value in self.__objects.items():
+            existing_data[key] = value.to_dict()
+
+        # Write the combined data back to the file
         with open(self.__file_path, mode="w", encoding="utf-8") as file:
-            for key, value in self.__objects.items():
-                json.dump({key: value.to_dict()}, file)
+            json.dump(existing_data, file)
 
     def reload(self):
-        """deserialize and loads objects from the json file"""
+        """Deserialize and load objects from the JSON file."""
         if os.path.isfile(self.__file_path):
             with open(self.__file_path, mode="r", encoding="utf-8") as file:
                 data = json.load(file)
                 for key, value in data.items():
-                    cls_name, obj_id = key.split(".")
-                    cls_ = globals()[cls_name]
-                    obj = cls_(**value)
+                    # Split the key into class name and object ID
+                    parts = key.split(".")
+                    if len(parts) != 2:
+                        # Skip this entry if key is not in the expected format
+                        continue
+                    class_name, obj_id = parts
+                    # Check if the class name exists in the current namespace
+                    if class_name not in globals():
+                        print(f"Class '{class_name}' not found in current namespace.")
+                        continue
+                    # Retrieve the class from the global namespace
+                    obj_class = globals()[class_name]
+                    # Instantiate an object of the class using the serialized data
+                    obj = obj_class(**value)
+                    # Store the object in the '__objects' dictionary
                     self.__objects[key] = obj
