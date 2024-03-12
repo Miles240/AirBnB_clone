@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""user class model"""
 from models.base_model import BaseModel
 
 class User(BaseModel):
