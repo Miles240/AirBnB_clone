@@ -3,11 +3,13 @@
 
 import json
 import os.path
+from models.user import User
 
 
 
 class FileStorage:
     """class for FileStorage"""
+    CLASSES = {'User': User}
 
     def __init__(self):
         """Initialization of FileStorage instances
