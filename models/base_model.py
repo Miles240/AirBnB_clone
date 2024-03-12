@@ -4,7 +4,6 @@
 
 import uuid
 import datetime
-
 from models import storage
 
 
@@ -36,10 +35,10 @@ class BaseModel:
 
     def to_dict(self):
         """returns the dictionary representation of the Base class"""
-        dict_class = self.__dict__
+        dict_class = self.__dict__.copy()
         dict_class["__class__"] = self.__class__.__name__
-        dict_class["created_at"] = dict_class["created_at"].isoformat()
-        dict_class["updated_at"] = dict_class["updated_at"].isoformat()
+        dict_class["created_at"] = self.created_at.isoformat()
+        dict_class["updated_at"] = self.updated_at.isoformat()
         return dict_class
 
     def __str__(self):

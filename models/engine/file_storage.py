@@ -37,7 +37,7 @@ class FileStorage:
         
         # Append new data to the existing data
         for key, value in self.__objects.items():
-            existing_data[key] = value.to_dict()
+            existing_data[key] = value.__dict__()
 
         # Write the combined data back to the file
         with open(self.__file_path, mode="w", encoding="utf-8") as file:
@@ -61,7 +61,7 @@ class FileStorage:
                         continue
                     # Retrieve the class from the global namespace
                     obj_class = globals()[class_name]
-                    # Instantiate an object of the class using the serialized data
+                    # Instantiate an object of the class using the dictionary representation
                     obj = obj_class(**value)
                     # Store the object in the '__objects' dictionary
                     self.__objects[key] = obj
