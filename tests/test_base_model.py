@@ -5,7 +5,6 @@ import os
 
 # Add the parent directory of 'models' to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-
 # Now you can import 'models' package
 from models import storage
 from models.base_model import BaseModel
@@ -22,8 +21,3 @@ my_model.name = "My_First_Model"
 my_model.my_number = 89
 my_model.save()
 print(my_model)
-import sys
-import os
-
-# Add the parent directory of 'models' to the Python path
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))

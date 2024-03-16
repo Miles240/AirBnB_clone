@@ -39,7 +39,7 @@ class FileStorage:
         
         # Append new data to the existing data
         for key, value in self.__objects.items():
-            existing_data[key] = value.__dict__()
+            existing_data[key] = value
 
         # Write the combined data back to the file
         with open(self.__file_path, mode="w", encoding="utf-8") as file:
@@ -50,20 +50,21 @@ class FileStorage:
         if os.path.isfile(self.__file_path):
             with open(self.__file_path, mode="r", encoding="utf-8") as file:
                 data = json.load(file)
-                for key, value in data.items():
-                    # Split the key into class name and object ID
-                    parts = key.split(".")
-                    if len(parts) != 2:
-                        # Skip this entry if key is not in the expected format
-                        continue
-                    class_name, obj_id = parts
-                    # Check if the class name exists in the current namespace
-                    if class_name not in globals():
-                        print(f"Class '{class_name}' not found in current namespace.")
-                        continue
-                    # Retrieve the class from the global namespace
-                    obj_class = globals()[class_name]
-                    # Instantiate an object of the class using the dictionary representation
-                    obj = obj_class(**value)
-                    # Store the object in the '__objects' dictionary
-                    self.__objects[key] = obj
+                self.__objects.update()
+                # for key, value in data.items():
+                #     # Split the key into class name and object ID
+                #     parts = key.split(".")
+                #     if len(parts) != 2:
+                #         # Skip this entry if key is not in the expected format
+                #         continue
+                #     class_name, obj_id = parts
+                #     # Check if the class name exists in the current namespace
+                #     if class_name not in globals():
+                #         print(f"Class '{class_name}' not found in current namespace.")
+                #         continue
+                #     # Retrieve the class from the global namespace
+                #     obj_class = globals()[class_name]
+                #     # Instantiate an object of the class using the dictionary representation
+                #     obj = obj_class(**value)
+                #     # Store the object in the '__objects' dictionary
+                #     self.__objects[key] = obj
