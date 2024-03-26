@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+"""Module for the filestorage class"""
+
 import os
 import json
 from models.base_model import BaseModel
@@ -10,6 +14,12 @@ from models.state import State
 
 
 class FileStorage:
+    """Representation of FileStorage class
+    Args:
+        __file_path(file location): the file to store the serialized json objects
+        __objects(dict): python dictionary
+    """
+
     __file_path = "file.json"
     __objects = {}
 
