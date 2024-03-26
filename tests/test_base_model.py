@@ -6,6 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from models.base_model import BaseModel
 from models import storage
 from models.user import User
+from models.city import City
 
 all_objs = storage.all()
 print("-- Reloaded objects --")
@@ -29,3 +30,11 @@ my_user2.email = "airbnb2@mail.com"
 my_user2.password = "root"
 my_user2.save()
 print(my_user2)
+
+
+print("-- Create a new City --")
+my_city = City()
+my_city.name = 'lagos'
+my_city.state_id = "city_id"
+my_city.save()
+print(my_city)
