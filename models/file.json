@@ -1,103 +1,54 @@
 {
-	"User.59ab1e9e-78c9-4b3d-9bd7-e30a7223dda4": {
-		"id": "59ab1e9e-78c9-4b3d-9bd7-e30a7223dda4",
-		"created_at": "2024-03-26T09:46:18.005020",
-		"updated_at": "2024-03-26T09:46:18.005052",
+	"User.15308ccb-37cb-4e9a-b3cc-e254a06a8863": {
+		"id": "15308ccb-37cb-4e9a-b3cc-e254a06a8863",
+		"created_at": "2024-03-26T13:55:33.800817",
+		"updated_at": "2024-03-26T13:55:33.800839",
 		"first_name": "Betty",
 		"last_name": "Bar",
 		"email": "airbnb@mail.com",
 		"password": "root",
 		"__class__": "User"
 	},
-	"User.e08a8626-0c7e-4629-ba7b-e78dfeec6ce2": {
-		"id": "e08a8626-0c7e-4629-ba7b-e78dfeec6ce2",
-		"created_at": "2024-03-26T09:46:18.005107",
-		"updated_at": "2024-03-26T09:46:18.005114",
+	"User.f4f4e358-ae29-497d-915e-011a4952d3c1": {
+		"id": "f4f4e358-ae29-497d-915e-011a4952d3c1",
+		"created_at": "2024-03-26T13:55:33.800878",
+		"updated_at": "2024-03-26T13:55:33.800881",
 		"first_name": "John",
 		"email": "airbnb2@mail.com",
 		"password": "root",
 		"__class__": "User"
 	},
-	"User.5b84e2f8-e686-4d2a-9aa4-2023c9243275": {
-		"id": "5b84e2f8-e686-4d2a-9aa4-2023c9243275",
-		"created_at": "2024-03-26T09:46:18.005159",
-		"updated_at": "2024-03-26T09:46:18.005165",
+	"City.e8035737-4bac-4c69-9580-fa4795f3b03e": {
+		"id": "e8035737-4bac-4c69-9580-fa4795f3b03e",
+		"created_at": "2024-03-26T13:55:33.800907",
+		"updated_at": "2024-03-26T13:55:33.800910",
+		"name": "lagos",
+		"state_id": "city_id",
+		"__class__": "City"
+	},
+	"User.e2d03006-7bb9-4ab6-b9ab-9131e2ee1d80": {
+		"id": "e2d03006-7bb9-4ab6-b9ab-9131e2ee1d80",
+		"created_at": "2024-03-26T13:55:33.801484",
+		"updated_at": "2024-03-26T13:55:33.801500",
 		"first_name": "Betty",
 		"last_name": "Bar",
 		"email": "airbnb@mail.com",
 		"password": "root",
 		"__class__": "User"
 	},
-	"User.8eca94cc-7327-4c22-95cb-cc5dc1bbffc3": {
-		"id": "8eca94cc-7327-4c22-95cb-cc5dc1bbffc3",
-		"created_at": "2024-03-26T09:46:18.005209",
-		"updated_at": "2024-03-26T09:46:18.005215",
+	"User.79acd688-ae28-4d75-9d77-de09f34b3f5d": {
+		"id": "79acd688-ae28-4d75-9d77-de09f34b3f5d",
+		"created_at": "2024-03-26T13:55:33.802355",
+		"updated_at": "2024-03-26T13:55:33.802370",
 		"first_name": "John",
 		"email": "airbnb2@mail.com",
 		"password": "root",
 		"__class__": "User"
 	},
-	"User.4f9435a7-fd03-413f-b732-1d8af2ed1d10": {
-		"id": "4f9435a7-fd03-413f-b732-1d8af2ed1d10",
-		"created_at": "2024-03-26T09:46:18.005258",
-		"updated_at": "2024-03-26T09:46:18.005264",
-		"first_name": "Betty",
-		"last_name": "Bar",
-		"email": "airbnb@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"User.7601c393-6bfe-45cb-b25a-7a0bc3ee4596": {
-		"id": "7601c393-6bfe-45cb-b25a-7a0bc3ee4596",
-		"created_at": "2024-03-26T09:46:18.005306",
-		"updated_at": "2024-03-26T09:46:18.005313",
-		"first_name": "John",
-		"email": "airbnb2@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"User.bbe47fcf-7724-48b8-9b4f-5256e69964d1": {
-		"id": "bbe47fcf-7724-48b8-9b4f-5256e69964d1",
-		"created_at": "2024-03-26T09:46:18.005355",
-		"updated_at": "2024-03-26T09:46:18.005361",
-		"first_name": "Betty",
-		"last_name": "Bar",
-		"email": "airbnb@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"User.f765e5e8-3444-49dc-8336-02d3284778df": {
-		"id": "f765e5e8-3444-49dc-8336-02d3284778df",
-		"created_at": "2024-03-26T09:46:18.005403",
-		"updated_at": "2024-03-26T09:46:18.005409",
-		"first_name": "John",
-		"email": "airbnb2@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"User.95a5d1d2-1259-442e-a872-43aa06b0ee24": {
-		"id": "95a5d1d2-1259-442e-a872-43aa06b0ee24",
-		"created_at": "2024-03-26T09:46:18.019187",
-		"updated_at": "2024-03-26T09:46:18.019209",
-		"first_name": "Betty",
-		"last_name": "Bar",
-		"email": "airbnb@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"User.08b98225-b8f7-4ccf-9736-2a20859b1933": {
-		"id": "08b98225-b8f7-4ccf-9736-2a20859b1933",
-		"created_at": "2024-03-26T09:46:18.019770",
-		"updated_at": "2024-03-26T09:46:18.019782",
-		"first_name": "John",
-		"email": "airbnb2@mail.com",
-		"password": "root",
-		"__class__": "User"
-	},
-	"City.dd493a3a-e7da-4e9d-9ce0-c3de87b9160c": {
-		"id": "dd493a3a-e7da-4e9d-9ce0-c3de87b9160c",
-		"created_at": "2024-03-26T09:46:18.023379",
-		"updated_at": "2024-03-26T09:46:18.023411",
+	"City.023c8d39-5009-4d0d-b730-9b589d7d42aa": {
+		"id": "023c8d39-5009-4d0d-b730-9b589d7d42aa",
+		"created_at": "2024-03-26T13:55:33.805027",
+		"updated_at": "2024-03-26T13:55:33.805074",
 		"name": "lagos",
 		"state_id": "city_id",
 		"__class__": "City"

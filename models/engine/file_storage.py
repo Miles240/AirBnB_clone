@@ -40,10 +40,13 @@ class FileStorage:
     def reload(self):
         """deserialize and loads objects from the json file"""
         if os.path.isfile(FileStorage.__file_path):
-            with open(FileStorage.__file_path, mode="r", encoding="utf-8") as file:
-                data = json.load(file)
-                for key, value in data.items():
-                    cls_name, obj_id = key.split(".")
-                    cls_ = eval(cls_name)
-                    obj = cls_(**value)
-                    FileStorage.__objects[key] = obj
+            if os.path.getsize(FileStorage.__file_path) > 0:
+                with open(FileStorage.__file_path, mode="r", encoding="utf-8") as file:
+                    data = json.load(file)
+                    for key, value in data.items():
+                        cls_name, obj_id = key.split(".")
+                        cls_ = eval(cls_name)
+                        obj = cls_(**value)
+                        FileStorage.__objects[key] = obj
+            else:
+                return
